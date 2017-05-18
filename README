@@ -59,11 +59,11 @@ The script also offer the 'clean' command, with the same options from the previo
 Output
 -------------------
 
-The UniBench output is the execution time on the GPU device, execution time for the serial version running on the CPU and the comparison of the results, with an acceptable threshold for the float precision. An example for the execution of the Polybench-2MM:
+The UniBench output is the execution time on the GPU device, execution time for the serial version running on the CPU and the comparison of the results, with an acceptable threshold for the float precision. An example for the execution of the Polybench-2MM on a MacBook Pro 2.4Ghz 4GB with Intel/Iris 1536 MB:
 
 << Linear Algebra: 2 Matrix Multiplications (D=A.B; E=C.D) >>
-GPU Runtime: 2.554422s
-CPU Runtime: 9.622760s
+GPU Runtime: 1.279422s
+CPU Runtime: 9.954760s
 Non-Matching CPU-GPU Outputs Beyond Error Threshold of 0.05 Percent: 0
 
 
