@@ -1,0 +1,17 @@
+Copyright (c) 2012 University of Delaware
+Contact:  Scott Grauer-Gray <sgrauerg@gmail.com>
+	   Louis-Noel Pouchet <pouchet@cse.ohio-state.edu>
+Web address: http://www.cse.ohio-state.edu/~pouchet/software/polybench/GPU
+
+If using this work, please cite the following paper: 
+Scott Grauer-Gray, Lifan Xu, Robert Searles, Sudhee Ayalasomayajula, and John Cavazos.  
+Auto-tuning a High-Level Language Targeted to GPU Codes. 
+To Appear In Proceedings of Innovative Parallel Computing 
+(InPar '12), 2012.
+
+Paper available at http://www.eecis.udel.edu/~grauerg/
+
+Acknowledgement:
+This work was funded in part by the U.S. National Science Foundation through the NSF
+Career award 0953667 and the Defense Advanced Research Projects Agency through the DARPA
+Computer Science Study Group (CSSG).

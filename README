@@ -1,0 +1,69 @@
+UniBench
+
+2015 - Institute of Computing, Unicamp, Brazil
+Authors: Luís Felipe Mattos, Rafael Cardoso & Márcio Pereira
+
+Introduction
+------------
+
+The UniBench is a collection of open source benchmark suites organized in a simple and modular structure. This benchmark suites were converted to make use of the new 'target' directive on the OpenMP 4.0 and was developed to test our version of the Clang compiler, which translates OpenMP 4.0 into OpenCL programs.
+
+
+Quick setup guide
+-----------------
+
+To use the UniBench, the script need the right permissions. If the unibench script does not have the execution permission, just use:
+
+	chmod +x ./unibench
+
+Use './parboil help' to display the commands and the avaiable benchmarks.
+Use './parboil list' to display the avaiable benchmarks.
+
+
+Executing a benchmark
+-------------------
+
+The unibench script offer many options for the execution. If you want to execute a specific benchmark from a specific benchmark suite, you need to specify the suite and the benchmark in the command line. For example, if you want to compile or execute the 2MM benchmark from the Polybench suite, you just need to use:
+
+	./unibench compile Polybench/2MM
+	./unibench run Polybench/2MM
+
+The script also accept the option to execute the complete benchmark suite, you can do this by specifying only the suite in the command line. For example, if you want to compile or execute the Parboil suite, just type:
+
+	./unibench compile Parboil
+	./unibench run Parboil
+
+However, if you want to compile or execute all the avaiable benchmarks, just use:
+
+	./unibench compile all
+	./unibench run all
+
+An important point is that this script is case sensitive, if you want to be sure that your benchmark name is correct, use a 'list' command before executing the UniBench.
+
+For executing this benchmark on mobile phones with Mali GPU devices, just add the flag '-mali', for example:
+
+	./unibench compile Parboil -mali
+
+For the proper compilation when executing on mobile phones, the environment must be working before the compilation!
+In this case, the binaries, kernels and temporary execution logs will be saved on the directory '/data/local/tmp/<Benchmark Suite>/<Benchmark Name>'.
+
+Cleaning a benchmark
+-------------------
+
+The script also offer the 'clean' command, with the same options from the previous examples, you can clean the binaries from a specific benchmark from a suite, from a whole suite or from all benchmarks. For example:
+
+	./unibench clean Polybench/2MM
+	./unibench clean Parboil
+	./unibench clean all
+
+Output
+-------------------
+
+The UniBench output is the execution time on the GPU device, execution time for the serial version running on the CPU and the comparison of the results, with an acceptable threshold for the float precision. An example for the execution of the Polybench-2MM:
+
+<< Linear Algebra: 2 Matrix Multiplications (D=A.B; E=C.D) >>
+GPU Runtime: 2.554422s
+CPU Runtime: 9.622760s
+Non-Matching CPU-GPU Outputs Beyond Error Threshold of 0.05 Percent: 0
+
+

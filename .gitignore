@@ -1,0 +1,14 @@
+# File extensions to be ignored anywhere in the tree
+*~
+*.o
+_kernel*
+
+# Explicit files to ignore
+Makefile_v1
+Makefile_v2
+myUnibench
+
+#Directories to ignore
+build/*
+build2/*
+log/*

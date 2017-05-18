@@ -1,0 +1,1 @@
+TGT_ARCH=gpu
