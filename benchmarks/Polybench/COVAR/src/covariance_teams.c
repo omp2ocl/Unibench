@@ -134,7 +134,7 @@ void covariance_OMP(DATA_TYPE* data, DATA_TYPE* symmat, DATA_TYPE* mean)
   }
 
   #pragma omp target
-  #pragma omp teams distribute parallel for collapse(2)
+  #pragma omp teams distribute parallel for
   for (j1 = 1; j1 < (M+1); j1++)
   {
     for (j2 = j1; j2 < (M+1); j2++)
