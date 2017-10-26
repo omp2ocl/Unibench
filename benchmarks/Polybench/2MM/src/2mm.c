@@ -118,7 +118,7 @@ void mm2_OMP(DATA_TYPE* A, DATA_TYPE* B, DATA_TYPE* C, DATA_TYPE* D, DATA_TYPE* 
   #pragma omp target data device (GPU) map(from: D[:NI*NK])
   {
    #pragma omp target map(to: A[:NI*NK], B[:NK*NJ])
-   #pragma omp parallel for simd collapse(2)
+   #pragma omp parallel for
    for (i = 0; i < NI; i++)
      {
        for (j = 0; j < NJ; j++)
@@ -132,7 +132,7 @@ void mm2_OMP(DATA_TYPE* A, DATA_TYPE* B, DATA_TYPE* C, DATA_TYPE* D, DATA_TYPE* 
      }
 	
     #pragma omp target map(to: C[:NI*NJ]) map(from: E[:NI*NL])
-    #pragma omp parallel for simd collapse(2)
+    #pragma omp parallel for
     for (i = 0; i < NI; i++)
       {
 	for (j = 0; j < NL; j++)
