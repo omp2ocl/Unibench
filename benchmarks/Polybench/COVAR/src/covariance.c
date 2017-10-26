@@ -137,7 +137,7 @@ void covariance_OMP(DATA_TYPE* data, DATA_TYPE* symmat, DATA_TYPE* mean)
   
   /* Calculate the m * m covariance matrix. */
   #pragma omp target map(to: data[:(M+1)*(M+1)]) map(from: symmat[:(M+1)*(N+1)])
-  #pragma omp parallel for collapse(2) schedule(dynamic,8)
+  #pragma omp parallel for schedule(dynamic,8)
   for (j1 = 1; j1 < (M+1); j1++)
     {
       for (j2 = j1; j2 < (M+1); j2++)
